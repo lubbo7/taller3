@@ -11,6 +11,8 @@ app.use(express.static('public'));
 
 MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 
+    useNewUrlParser: true
+
     if (err) throw err;
     db = client.db('musica');
 
@@ -31,11 +33,6 @@ app.get('/albumes/:album', (req, res) => {
     )
 });
 
-
-
-
-
-
 app.get('/productosPorIds', (req, res) => {
     console.log(req.query.ids);
     var arreglo = req.query.ids.split(',');
@@ -55,6 +52,10 @@ app.get('/productosPorIds', (req, res) => {
 
 app.get('/checkout',(req,res)=>{
     res.render('checkout');
+});
+
+app.get('/intro',(req,res)=>{
+    res.render('intro');
 });
 
 

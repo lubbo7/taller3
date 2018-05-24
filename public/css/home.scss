@@ -23,7 +23,7 @@ $negro: rgb(65,
 }
 
 .menuIcon {
-    background: url(iconos/menu.svg) no-repeat center center;
+    background: url(../../iconos/menu.svg) no-repeat center center;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -35,7 +35,7 @@ $negro: rgb(65,
 }
 
 .menuIconNegro {
-    background: url(iconos/menuNegro.svg) no-repeat center center;
+    background: url(../../iconos/menuNegro.svg) no-repeat center center;
 }
 
 body.viewing-page-1 {
@@ -65,7 +65,7 @@ body.viewing-page-2,
         color: $negro;
     }
     .menuIcon {
-        background: url(iconos/menuNegro.svg) no-repeat center center;
+        background: url(../iconos/menuNegro.svg) no-repeat center center;
     }
     a.enlaces_link {
         color: $negro;
@@ -76,25 +76,25 @@ body.viewing-page-2,
         /* For IE8 and earlier */
     }
     div.redes_facebook {
-        background: url("iconos/fbNegro.svg") no-repeat center center;
+        background: url("../iconos/fbNegro.svg") no-repeat center center;
     }
     div.redes_instagram {
-        background: url("iconos/instagramNegro.svg") no-repeat center center;
+        background: url("../iconos/instagramNegro.svg") no-repeat center center;
     }
     div.redes_twitter {
-        background: url("iconos/twitterNegro.svg") no-repeat center center;
+        background: url("../iconos/twitterNegro.svg") no-repeat center center;
     }
     div.redes_youtube {
-        background: url("iconos/youtubeNegro.svg") no-repeat center center;
+        background: url("../iconos/youtubeNegro.svg") no-repeat center center;
     }
     .moverMenuIcon {
-        background: url(iconos/xNegro.svg) no-repeat center center !important;
+        background: url(../iconos/xNegro.svg) no-repeat center center !important;
     }
 }
 
 .home {
     .redboneLogo {
-        background: url(iconos/logo.svg) no-repeat center center;
+        background: url(../iconos/logo.svg) no-repeat center center;
         width: 150px;
         height: 45px;
         position: absolute;
@@ -137,7 +137,7 @@ section.primeraPag {
 div.contenedor {}
 
 .redboneLogo {
-    background: url(iconos/logo.svg) no-repeat center center;
+    background: url(../iconos/logo.svg) no-repeat center center;
     width: 300px;
     height: 300px;
     position: absolute;
@@ -148,7 +148,7 @@ div.contenedor {}
 }
 
 .redboneLogoNegro {
-    background: url(iconos/logoNegro.svg) no-repeat center center;
+    background: url(../iconos/logoNegro.svg) no-repeat center center;
     width: 150px;
     height: 45px;
     position: absolute;
@@ -181,7 +181,7 @@ p.decoracion {
 }
 
 .moverMenuIcon {
-    background: url(iconos/x.svg) no-repeat center center !important;
+    background: url(../iconos/x.svg) no-repeat center center !important;
     left: 49%;
     margin-left: 0px;
 }
@@ -300,7 +300,7 @@ div.redes_facebook {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url("iconos/fb.svg") no-repeat center center;
+    background: url("../iconos/fb.svg") no-repeat center center;
     transition: all 1s;
 }
 
@@ -309,7 +309,7 @@ div.redes_instagram {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url("iconos/instagram.svg") no-repeat center center;
+    background: url("../iconos/instagram.svg") no-repeat center center;
     transition: all 1s;
 }
 
@@ -318,7 +318,7 @@ div.redes_twitter {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url("iconos/twitter.svg") no-repeat center center;
+    background: url("../iconos/twitter.svg") no-repeat center center;
     transition: all 1s;
 }
 
@@ -327,7 +327,7 @@ div.redes_youtube {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url("iconos/youtube.svg") no-repeat center center;
+    background: url("../iconos/youtube.svg") no-repeat center center;
     transition: all 1s;
 }
 
