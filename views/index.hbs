@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="icon" href="iconos/icon.png">
+
+    <title>Redbone</title>
+</head>
+
+<body>
+
+    <div class="cabecera">
+
+        <a href="/">
+            <div class="redboneLogo"></div>
+        </a>
+
+        <p class="decoracion">-</p>
+
+        <div class="enlacesInteres">
+            <ul class="enlaces">
+                <li class="enlaces_item">
+                    <a href="#" class="enlaces_link"> Our artists </a>
+                </li>
+                <li class="enlaces_item">
+                    <a href="#" class="enlaces_link"> About us </a>
+                </li>
+                <li class="enlaces_item">
+                    <a href="#" class="enlaces_link"> Sign with us </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+    {{!-- MENU PARA FILTROS --}}
+    <section class="todoFiltros">
+        <div class="filtros">
+            <ul>
+
+                {{!-- PRECIO --}}
+
+                <li class="principales">
+                    <a href="">Price</a>
+                    <ul class="secundarios">
+
+                        <li>
+                            <a href="?precio=0">
+                                0 - 15.000
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?precio=15">
+                                15.000 - 30.000
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?precio=30">
+                                30.000 - 45.000
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?precio=45">
+                                45.000 - 60.000
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?precio=60">
+                                60.000 - 75.000
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{!-- Estrellas --}}
+
+                <li class="principales">
+                    <a href="">Score</a>
+                    <ul class="secundarios">
+
+                        <li>
+                            <a href="?estrellas=1">
+                                1
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?estrellas=2">
+                                2
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?estrellas=3">
+                                3
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?estrellas=4">
+                                4
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="?estrellas=5">
+                                5
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{!-- Género --}}
+
+                <li class="principales">
+                    <a href=""> Genre </a>
+                    <ul class="secundarios">
+                        <li>
+                            <a href="?genero=Alternative">
+                                Alternative
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?genero=Pop">
+                                Pop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?genero=Rock">
+                                Rock
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?genero=Indie">
+                                Indie
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{!-- Fecha --}}
+
+                <li class="principales">
+                    <a href=""> Year </a>
+                    <ul class="secundarios">
+                        <li>
+                            <a href="?fecha=2010">
+                                2010
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2011">
+                                2011
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2012">
+                                2012
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2013">
+                                2013
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2014">
+                                2014
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2015">
+                                2015
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2016">
+                                2016
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2017">
+                                2017
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?fecha=2018">
+                                2018
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="carro">
+        <p class="carrito">0</p>
+    </div>
+
+    <div class="productos">
+        {{#each albumes}}
+        <div class="album" data-id="{{this._id}}">
+            <button class="agregar">+</button>
+            <p class="precio">$ {{precio}}.000</p>
+            <a href="/albumes/{{album}}">
+                <img class="cover" src="imagenes/{{imagen}}.jpg" alt="">
+            </a>
+            <div class="info">
+                <h5>{{album}}</h5>
+                <p class="artista">by
+                    <span id="nombreArtista">{{artista}}</span>
+                </p>
+                <hr>
+                <p class="fecha">released in
+                    <span id="masGrueso"> {{fecha}}</span>
+                </p>
+                <p class="puntaje">
+                    <span id="masDelgado"> Score </span> {{estrellas}}</p>
+                <p class="artista"> Songs
+                    <span id="masGrueso"> {{canciones}} </span>
+                </p>
+                <p class="artista"> Genre
+                    <span id="masGrueso"> {{genero}} </span>
+                </p>
+            </div>
+            {{!-- Descripción --}} {{!--
+            <p class="puntaje">
+                "{{album}} is one of the albums released by Redbone Records, recorded by {{artista}} in {{fecha}}. With 11 songs, mostly
+                {{genero}} music, {{artista}} take us to another level on music. Stream it now on all the platforms and buy
+                it now!"
+            </p>
+            --}}
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="menuIcon" id="menuIcon">
+    </div>
+
+
+    <script src='js/cd.js'></script>
+    <script src='js/cliente.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+$gris: #333333;
+$verde: #2ea516;
+$blanco: #eeeeee;
+$amarillo: #ffd050;
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: $amarillo;
+    /* WebKit/Blink Browsers */
+}
+
+div.productos {
+    margin: auto;
+    padding: auto;
+    vertical-align: min;
+    width: 90%;
+}
+
+div.album {
+    vertical-align: text-top;
+    display: inline-block;
+    width: 24%;
+    padding: 50px;
+    margin-bottom: 0px;
+}
+
+div.info {
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cecece;
+    border-top-style: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 0px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cecece;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#nombreArtista {
+    font-weight: 800;
+}
+
+.agregarTam {
+    font-weight: 100;
+}
+
+#masGrueso {
+    font-weight: 900;
+    font-size: 1em;
+}
+
+#masDelgado {
+    font-weight: 200;
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+h5 {
+    color: $gris;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+p {
+    color: $gris;
+}
+
+p.artista {
+    font-size: 0.8em;
+    font-weight: 200;
+    font-style: italic;
+}
+
+p.fecha {
+    text-align: right;
+    font-size: 0.8em;
+    font-weight: 200;
+}
+
+p.puntaje {
+    font-weight: 900;
+    text-align: right;
+}
+
+p.precio {
+    text-align: right;
+    color: $blanco;
+    font-weight: 600;
+    background: $verde;
+    padding: 2px;
+    margin-left: 60%;
+    border-top-left-radius: 100px;
+}
+
+img.cover {
+    width: 100%;
+    height: auto;
+}
+
+img.cover:hover {
+    height: auto;
+}
+
+button {
+    float: left;
+    text-align: center;
+    margin: auto;
+    border-radius: 100px;
+    font-size: 0.8em;
+    font-weight: 900;
+    font-family: "Quicksand", sans-serif;
+    background-color: #fff;
+    color: $gris;
+    padding: 2px 6px;
+    width: auto;
+    border: none;
+    outline-style: none;
+    transition-duration: 0.5s;
+    border-width: 1.3px;
+    border-color: $gris;
+    border-style: solid;
+}
+
+button:hover {
+    background-color: $gris;
+    color: #f7f7f7;
+}
+
+.filtros{
+    margin-top: 20px;
+}
+
+.todoFiltros {
+    color: $gris;
+    list-style: none;
+    a {
+        text-decoration: none;
+        color: #333333;
+        transition: 0.4s;
+    } //OPCIONES GENERALES
+    ul {
+        font-weight: 400;
+        letter-spacing: 0.3em;
+        padding: 10px;
+        display: flex;
+        width: 80%;
+        margin: auto;
+        text-align: center; //SB OPCIONES
+        ul.secundarios {
+            font-size: 1em;
+            transition: 0.4s;
+            display: none;
+            position: absolute;
+            list-style: none;
+            width: 19%;
+            background: #fff;
+            color: #333333;
+            margin-top: auto;
+            border-width: 1px;
+            border-color: #333333;
+            border-style: solid;
+            text-transform: none;
+        }
+        li.principales {
+            font-size: 0.8em;
+            padding: 10px 0px;
+            list-style: none;
+            width: 24%;
+            text-transform: uppercase;
+            list-style: none;
+            border-width: 1px;
+            border-color: #fff;
+            border-style: solid;
+        }
+        li:hover {
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            ul.secundarios {
+                display: block;
+                position: absolute;
+            }
+        }
+    }
+}
+
+//PRODUCTO SOLO
+.decor {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    z-index: -10;
+    background: #f4f4f4;
+}
+
+#solo {
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.productoSolo {
+    align-items: center;
+    align-items: center;
+    margin: auto;
+}
+
+.albumSolo {
+    display: inline-block;
+    margin-top: 3%;
+    div.info {
+        width: 30%;
+        margin: auto;
+        border: none;
+    }
+    .agregar {
+        text-align: center;
+        margin: 20px 0;
+        align-content: center;
+        align-items: center;
+        float: none;
+    }
+}
+
+.descripcion {
+    font-weight: 200;
+}
+
+.carrito {
+    background: #333333;
+    color: #eeeeee;
+    font-weight: 700;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding: 10px;
+    padding-right: 20px;
+    font-size: 1.4em;
+    position: fixed;
+}
+
+.redboneLogo {
+    background: url(iconos/logoNegro.svg) no-repeat center center;
+    width: 150px;
+    height: 45px;
+    position: relative;
+    margin: 20px 0px 0px 7%;
+    transition: all 0.9s;
+}
+
+.cabecera{
+    padding: 10px;
+    background: #f4f4f4;
+    padding-bottom: 40px;
+}
+
+div.enlacesInteres {
+    font-weight: 100;
+    position: absolute;
+    right: 7%;
+    top: 40px;
+    z-index: 5;
+    list-style: none;
+}
+
+
+li.enlaces_item {
+    font-size: 0.9em; 
+    margin-right: 80px;
+    display: inline-block;
+    transition: 0.4s;
+    a{
+        text-decoration: none;
+        color: #333333;
+        
+    }
+    
+}
+
+li.enlaces_item:hover {
+    font-weight: 900;
+}
+
+.decoracion{
+    font-weight: 400;
+    text-align: center;
+    margin-top: -30px;
+}
+
+img.cover{
+    transition: 0.4s;
+}
+
+img.cover:hover{
+    opacity: 0.4;;
+}
