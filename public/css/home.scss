@@ -134,7 +134,6 @@ section.primeraPag {
     /* Old WebKit */
 }
 
-div.contenedor {}
 
 .redboneLogo {
     background: url(../iconos/logo.svg) no-repeat center center;
@@ -286,7 +285,6 @@ p.skip {
 li.enlaces_item {
     margin-right: 80px;
     display: inline-block;
-    float: right;
     transition: 0.4s;
 }
 
@@ -543,7 +541,6 @@ button.buyNowButton {
 div.contenedorCD {
     width: 400px;
     height: 400px;
-    -webkit-perspective: 2500;
 }
 
 .CD {
@@ -640,7 +637,6 @@ article {
     justify-content: center;
 }
 
-.home {}
 
 article.artistaUno {
     margin-right: 100px;
