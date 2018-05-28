@@ -13,11 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
 
-
-
-
-
-<!-- Control Video -->
+    <!-- Control Video -->
     <script type="text/javascript">
         // Loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
@@ -30,26 +26,26 @@
 
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('video', {
-                videoId: '_lMlsPQJs6U'
-                , playerVars: {
-                    autoplay: 1
-                    , controls: 0
-                    , disablekb: 1
-                    , hl: 'ru-ru'
-                    , loop: 1
-                    , modestbranding: 1
-                    , showinfo: 0
-                    , autohide: 1
-                    , color: 'white'
-                    , iv_load_policy: 3
-                    , theme: 'light'
-                    , rel: 0
-                    , start: 91
-                    , end: 240
+                videoId: '_lMlsPQJs6U',
+                playerVars: {
+                    autoplay: 1,
+                    controls: 0,
+                    disablekb: 1,
+                    hl: 'ru-ru',
+                    loop: 1,
+                    modestbranding: 1,
+                    showinfo: 0,
+                    autohide: 1,
+                    color: 'white',
+                    iv_load_policy: 3,
+                    theme: 'light',
+                    rel: 0,
+                    start: 91,
+                    end: 240
+                },
+                events: {
+                    'onReady': onPlayerReady,
                 }
-                , events: {
-                    'onReady': onPlayerReady
-                , }
             });
         }
 
@@ -58,14 +54,17 @@
         }
     </script>
 
-
-
 </head>
 
 <body>
 
-
     <div class="main">
+
+        <section class="canvas">
+            <div class="interaccion">
+
+            </div>
+        </section>
 
         <section class="primeraPag" id="primeraPag">
 
@@ -84,7 +83,6 @@
                 <button class="newMusicButton">new music</button>
 
             </div>
-<div id="video" class="exa"></div>
         </section>
 
         <!-- WHAT ABOUT US -->
@@ -177,6 +175,8 @@
 
     <div class="contenedor">
 
+                    <div id="video" class="exa"></div>
+
         <div class="navegacion" id="nav" class="main">
             <ul class="menu">
                 <li class="menu_item" id="menu_item_uno">
@@ -221,10 +221,18 @@
                 <div class="redes_youtube">
                 </div>
             </a>
-
+<button id="botonControl">
+        OK
+    </button>
         </div>
     </div>
 
+    
+   <!-- <div class="cargando" id="cargando">
+        <p id="cargandoTexto1">We are not just music</p>
+        <p id="cargandoTexto2">We are an experience</p>
+
+    </div> -->
     <script src="../js/jquery.onepage-scroll.js"></script>
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.0/TweenLite.min.js"></script>
@@ -235,6 +243,10 @@
     <script src="../js/jquery.youtubebackground.js"></script>
     <script src="https://www.youtube.com/player_api"></script>
 
+    <script src="../js/p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="../js/p5.js"></script>
 </body>
 
 </html>
