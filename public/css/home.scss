@@ -43,7 +43,7 @@ body.viewing-page-1 {
         top: 0;
         background: rgba(0, 0, 0, 0.88); //      background: rgba(188, 10, 15, 0.85);
         section.primeraPag {
-            background: url(../imagenes/childish.jpg) no-repeat center center;
+           // background: url(../imagenes/childish.jpg) no-repeat center center;
         }
     }
     a.enlaces_link {
@@ -110,7 +110,7 @@ body {
 }
 
 section.primeraPag {
-    background: url(../imagenes/childish.jpg) no-repeat center center;
+  //  background: url(../imagenes/childish.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     transition: all 0.4s;
@@ -968,4 +968,15 @@ p.enFooter {
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+//dlskndlkjfklfjk
+#video {
+    position: fixed;
+    height: 120%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 120%;
+    z-index: -2;
 }
