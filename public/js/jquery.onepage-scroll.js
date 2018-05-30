@@ -20,13 +20,13 @@
     sectionContainer: "section",
     easing: "ease",
     animationTime: 1000,
-    pagination: true,
+    pagination: false,
     updateURL: false,
     keyboard: true,
     beforeMove: null,
     afterMove: null,
     loop: true,
-    responsiveFallback: false,
+    responsiveFallback: true,
     direction: 'vertical'
   };
 

@@ -8,9 +8,6 @@ var logoPrincipal = document.getElementById('redboneLogo'),
     cargandoTexto1 = document.getElementById('cargandoTexto1'),
     cargandoTexto2 = document.getElementById('cargandoTexto2');
 
-
-
-
 //TweenLite.from(cargando, 1, {opacity: 0});
 //TweenLite.from(cargandoTexto1, 1, {opacity: 0, y: -4500, delay: 1, ease: Power4.easeOut});
 //TweenLite.from(cargandoTexto2, 1, {opacity: 0, y: -4500, delay: 2, ease: Power4.easeOut});

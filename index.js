@@ -58,11 +58,17 @@ app.get('/intro',(req,res)=>{
     res.render('intro');
 });
 
-
 app.get('/home',(req,res)=>{
     res.render('home');
 });
 
+app.get('/start',(req,res)=>{
+    res.render('start');
+});
+
+app.get('/interaction',(req,res)=>{
+    res.render('interaccion');
+});
 
 app.get('/', (req, res) => {
 

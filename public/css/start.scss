@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+@font-face {
+    font-family: "VCR";
+    src: url(../fuentes/VCR_OSD_MONO_1.001.ttf) format("truetype");
+}
+$gris: #333333;
+$verde: #2ea516;
+$blanco: #eeeeee;
+$amarillo: #ffd050;
+* {
+    font-family: 'Teko', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+.generalContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  //  background: #0e0e0e;
+    .informationContainer {
+        width: 800px;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        .imageContainer {
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .infoContainer {
+           // padding: 20px;
+            width: 100%;
+            height: 100%;
+            color: rgb(24, 24, 24);
+            .textContainer {
+                height: 70%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 20px; //align-items: center;
+               // justify-content: center;
+            }
+            .buttonContainer {
+                height: 30%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3em;
+    font-family: "VCR", sans-serif
+}
+
+h2{
+    letter-spacing: 20px;
+    font-weight: 900;
+}
+
+h3{
+    font-weight: 300;
+    letter-spacing: 20px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }

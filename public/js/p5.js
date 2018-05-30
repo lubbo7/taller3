@@ -1,7 +1,6 @@
 /*var song;
 var fft;
 var control = document.getElementById('botonControl');
-
 var img;
 var vid;
 var theta = 0;
@@ -9,14 +8,10 @@ var x;
 var y;
 var outsideRadius = 150;
 var insideRadius = 100;
-
-
 function setup() {
-
     var numPoints = int(map(mouseX, 0, width, 6, 60));
     var angle = 0;
     var angleStep = 180.0 / numPoints;
-
     beginShape(TRIANGLE_STRIP);
     for (var i = 0; i <= numPoints; i++) {
         var px = x + cos(radians(angle)) * outsideRadius;
@@ -29,25 +24,18 @@ function setup() {
         angle += angleStep;
     }
     endShape();
-
-
     song = loadSound('../sonido/daydream.mp3');
     createCanvas(windowWidth, windowHeight, WEBGL);
     // background(255, 0, 0);
     fft = new p5.FFT();
-
     //tres de
-
     img = loadImage("../imagenes/22.jpg");
     vid = createVideo(["https://www.youtube.com/watch?v=etIdz_793lw"]);
     vid.loop();
     vid.hide();
-
     x = width / 2;
     y = height / 2;
-
 }
-
 function mousePressed() {
     if (song.isPlaying()) { // .isPlaying() retorna una variable booleana
         song.pause();
@@ -58,13 +46,10 @@ function mousePressed() {
         fft.setInput(song);
     }
 }
-
 function draw() {
-
     background(250);
     /*
         var spectrum = fft.analyze();
-
         beginShape();
         for (i = 0; i < spectrum.length; i++) {
             vertex(i, map(spectrum[i], 0, 255, height, 0));
@@ -74,15 +59,10 @@ function draw() {
 
     //  
  /*   var spectrum = fft.analyze();
-
-
     rotateY(frameCount * 0.01);
-
     for (var j = 0; j < 5; j++) {
         for (i = 0; i < spectrum.length; i++) {
-
             push();
-
             for (var i = 0; i < 80; i++) {
                 translate(sin(0.01 + j) * 100, sin(frameCount * 0.1 + j + spectrum[i]) * 100, i * 0.1);
                 rotateZ(mouseY + 0.02);
@@ -98,7 +78,6 @@ function draw() {
         }
     }
 }
-
 // fuente del video: https://vimeo.com/90312869
 function tresde() {
     //translate(-220, 0, 0);
@@ -120,7 +99,7 @@ function tresde() {
     box(60, 60, 60);
     pop();
     theta += 0.05;
-}*/
+}*/ 
 
 function sound() {
     var height;
@@ -181,7 +160,6 @@ function draw() {
     }
     background(colorFondo);
 
-
     // peakDetect accepts an fft post-analysis
     var spectrum = fft.analyze();
     peakDetect.update(fft);
@@ -195,8 +173,6 @@ function draw() {
         var h = -height + map(spectrum[i], 0, 255, height, 0);
         rect(x, height, (width / spectrum.length) * 10, h )
     }
-
-    
 
     var rms = -10;
     if ( peakDetect.isDetected ) {
@@ -224,8 +200,6 @@ function draw() {
         vertex(x,y);
     }
     endShape();
-
-
 /*
     var rms = 0;
     if ( peakDetect.isDetected ) {
@@ -234,7 +208,6 @@ function draw() {
         g = -127;
         b = -127;
         o = .5;
-
     } else {
         r = r * .85;
         g = g * .85;
