@@ -23,8 +23,8 @@ var timestamp = new Date().getTime();
 var Y_AXIS = 1;
 var X_AXIS = 2;
 var b1, b2, c1, c2;
-var imagen = document.getElementsByClassName('imageContainer');
-
+var reproducir = document.getElementById('play');
+var fuente;
 
 var d;
 var red;
@@ -42,13 +42,13 @@ function preload() {
     fft = new p5.FFT();
     peakDetect = new p5.PeakDetect();
     textura = loadImage('../imagenes/textura/textura.png');
-
+    fuente = loadFont("../fuentes/VCR_OSD_MONO_1.001.ttf");
 }
 
 function setup() {
 
     createCanvas(windowWidth, windowHeight);
-     song.play();
+    //    song.play();
     //peaks = song.getPeaks();
 
     // create a new Amplitude analyzer
@@ -74,12 +74,13 @@ var r = 0,
 function draw() {
     background(0);
     tint(255, 140);
-    image(fondo, 0, 0, windowWidth,windowHeight);
+    image(fondo, 0, 0, windowWidth, windowHeight);
     fill(255);
-    textSize(32);
-    text(song.duration(), 10, 30);
-    text("Segundos "+(int)(song.currentTime()%60).toString().trim(), 10, 60);
-    text("Minutos "+(int)(song.currentTime()/60).toString().trim(), 10, 90);
+    textFont(fuente);
+    textSize(20);
+var equis = 1152;
+    text((int)(song.currentTime() / 60).toString().trim() + " : ", equis, 550);
+    text((int)(song.currentTime() % 60).toString().trim(), equis+45, 550);
 
     var colorFondo = 255;
     var rms = 0;
@@ -105,11 +106,11 @@ function draw() {
         b = 0;
         rms = analyzer.getLevel();
     }
-  //  background(colorFondo);
+    //  background(colorFondo);
 
 
     var waveform = fft.waveform();
-      fill(0);
+    fill(0);
     beginShape();
 
     stroke(255, 255, 255, 70); // linea
@@ -137,7 +138,7 @@ function draw() {
             o = o * .85;
             rms = analyzer.getLevel();
         }*/
-   // fill('rgba(' + parseInt(127 + r) + ',' + parseInt(127 + g) + ',' + parseInt(127 + b) + ',' + (.5 + o) + ')');
+    // fill('rgba(' + parseInt(127 + r) + ',' + parseInt(127 + g) + ',' + parseInt(127 + b) + ',' + (.5 + o) + ')');
     //fill('rgba(255,0,0,.5)');
     // Get the average (root mean square) amplitude
     //var rms = analyzer.getLevel();
@@ -152,5 +153,14 @@ function draw() {
 }
 
 function mousePressed() {
-    filter(INVERT);
+
+
+    if(reproducir){
+        if (song.isPlaying() ) {
+            song.pause();
+            background(10);
+          } else {
+            song.play();
+          }
+    }
 }

@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
 @font-face {
     font-family: "VCR";
@@ -10,7 +12,7 @@ $verde: #2ea516;
 $blanco: #eeeeee;
 $amarillo: #ffd050;
 * {
-    font-family: 'Teko', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -65,22 +67,16 @@ $amarillo: #ffd050;
                 font-size: 2em;
                 font-family: "VCR", sans-serif;
                 padding: 20px;
-                a {
-                    text-decoration: none;
-                    color: #eeeeee;
-                   
-                    p {
-                        align-items: center;
-                        justify-content: center;
-                        display:flex;
-                        text-align: center;
-                        font-family: "VCR", sans-serif;
-                        right: 0px;
-                        bottom: 0px;
-                        vertical-align: bottom;
-                    }
+                text-decoration: none;
+                color: #eeeeee;
+                p {
+                    text-align: right;
+                    font-family: "VCR", sans-serif;
+                    right: 0px;
+                    bottom: 0px;
+                    vertical-align: bottom;
                 }
-                a:hover {
+                p:hover {
                     cursor: pointer;
                     color: #ffd050;
                 }
@@ -97,10 +93,15 @@ h1 {
 
 h2 {
     font-weight: 900;
+    letter-spacing: 5px;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-weight: 300;
+    margin-top: -2px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-size: 1em;
 }
 
 canvas {
@@ -111,10 +112,11 @@ canvas {
 }
 
 .textoGrande {
+    font-family: 'Teko', sans-serif;
     font-size: 15em;
     -webkit-text-fill-color: rgb(0, 0, 0);
     -webkit-text-stroke-color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1.5px;
     font-weight: 400;
     letter-spacing: 80px;
     opacity: 0.2;
