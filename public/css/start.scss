@@ -4,6 +4,7 @@
     font-family: "VCR";
     src: url(../fuentes/VCR_OSD_MONO_1.001.ttf) format("truetype");
 }
+
 $gris: #333333;
 $verde: #2ea516;
 $blanco: #eeeeee;
@@ -23,7 +24,12 @@ $amarillo: #ffd050;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  //  background: #0e0e0e;
+    .backgroundContainer {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        opacity: 0.2;
+    }
     .informationContainer {
         width: 800px;
         height: 400px;
@@ -33,27 +39,40 @@ $amarillo: #ffd050;
             padding: 20px;
             width: 100%;
             height: 100%;
-            img {
+            img.cover {
                 width: 100%;
                 height: 100%;
             }
         }
         .infoContainer {
-           // padding: 20px;
+            // padding: 20px;
             width: 100%;
             height: 100%;
-            color: rgb(24, 24, 24);
+            color: rgb(245, 245, 245);
             .textContainer {
                 height: 70%;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 padding: 20px; //align-items: center;
-               // justify-content: center;
+                // justify-content: center;
             }
             .buttonContainer {
                 height: 30%;
                 width: 100%;
+                font-style: none;
+                color: #ffd050;
+                font-size: 2em;
+                font-family: "VCR", sans-serif;
+                a {
+                    font-family: "VCR", sans-serif;
+                    text-decoration: none;
+                    color: #eeeeee;
+                    
+                }
+                a:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -65,14 +84,12 @@ h1 {
     font-family: "VCR", sans-serif
 }
 
-h2{
-    letter-spacing: 20px;
+h2 {
     font-weight: 900;
 }
 
-h3{
+h3 {
     font-weight: 300;
-    letter-spacing: 20px;
 }
 
 canvas {
@@ -80,4 +97,26 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1;
-  }
+}
+
+.textoGrande {
+    font-size: 15em;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    font-weight: 400;
+    letter-spacing: 80px;
+    opacity: 0.2;
+}
+
+#primero {
+    position: absolute;
+    left: 20%;
+    top: 7%;
+}
+
+#segundo {
+    position: absolute;
+    right: 20%;
+    bottom: 5%;
+}
