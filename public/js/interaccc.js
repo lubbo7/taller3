@@ -75,6 +75,11 @@ function draw() {
     background(0);
     tint(255, 140);
     image(fondo, 0, 0, windowWidth,windowHeight);
+    fill(255);
+    textSize(32);
+    text(song.duration(), 10, 30);
+    text("Segundos "+(int)(song.currentTime()%60).toString().trim(), 10, 60);
+    text("Minutos "+(int)(song.currentTime()/60).toString().trim(), 10, 90);
 
     var colorFondo = 255;
     var rms = 0;

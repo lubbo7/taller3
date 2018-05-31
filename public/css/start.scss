@@ -64,14 +64,25 @@ $amarillo: #ffd050;
                 color: #ffd050;
                 font-size: 2em;
                 font-family: "VCR", sans-serif;
+                padding: 20px;
                 a {
-                    font-family: "VCR", sans-serif;
                     text-decoration: none;
                     color: #eeeeee;
-                    
+                   
+                    p {
+                        align-items: center;
+                        justify-content: center;
+                        display:flex;
+                        text-align: center;
+                        font-family: "VCR", sans-serif;
+                        right: 0px;
+                        bottom: 0px;
+                        vertical-align: bottom;
+                    }
                 }
                 a:hover {
                     cursor: pointer;
+                    color: #ffd050;
                 }
             }
         }
@@ -96,7 +107,7 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -5;
 }
 
 .textoGrande {
@@ -113,10 +124,14 @@ canvas {
     position: absolute;
     left: 20%;
     top: 7%;
+    padding: -100px;
+    z-index: -1;
 }
 
 #segundo {
     position: absolute;
     right: 20%;
     bottom: 5%;
+    padding: -100px;
+    z-index: -1;
 }
