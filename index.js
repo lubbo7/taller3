@@ -62,6 +62,10 @@ app.get('/home',(req,res)=>{
     res.render('home');
 });
 
+app.get('/',(req,res)=>{
+    res.render('intro');
+});
+
 app.get('/start',(req,res)=>{
     res.render('start');
 });
@@ -70,7 +74,7 @@ app.get('/interaction',(req,res)=>{
     res.render('interaccion');
 });
 
-app.get('/', (req, res) => {
+app.get('/productos', (req, res) => {
 
     var producto = db.collection('albumes').find();
     var precioSuma = parseInt(req.query.precio) * 1000 + 15000;

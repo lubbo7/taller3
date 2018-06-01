@@ -78,9 +78,9 @@ function draw() {
     fill(255);
     textFont(fuente);
     textSize(20);
-var equis = 1152;
+    var equis = 1152;
     text((int)(song.currentTime() / 60).toString().trim() + " : ", equis, 550);
-    text((int)(song.currentTime() % 60).toString().trim(), equis+45, 550);
+    text((int)(song.currentTime() % 60).toString().trim(), equis + 45, 550);
 
     var colorFondo = 255;
     var rms = 0;
@@ -154,12 +154,12 @@ var equis = 1152;
 function mousePressed() {
 
 
-    if(reproducir){
-        if (song.isPlaying() ) {
+    if (reproducir) {
+        if (song.isPlaying()) {
             song.pause();
             background(10);
-          } else {
+        } else {
             song.play();
-          }
+        }
     }
 }

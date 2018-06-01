@@ -7,10 +7,11 @@ var marcoLFL,
 
 var imagenCover;
 
+var num = 0;
+
 var visualizer = function (p) {
     p.setup = function () {
-        p.createCanvas(p.windowWidth, canvas.clientHeight);
-        reproducir = p.select('#play');
+        p.createCanvas(canvas.clientWidth, canvas.clientHeight);
         imagenCover = 'lfl1';
     }
 
@@ -24,10 +25,38 @@ var visualizer = function (p) {
     }
 
     p.draw = function () {
-        console.log(imagenCover);
         p.background(255);
-        p.image(lfl2, 300, 100);
-        p.image(marcoLFL, 300, 100);
+
+        switch (num) {
+            case 0:
+                p.image(lfl1, 300, 0);
+                break;
+            case 1:
+                p.image(lfl2, 300, 0);
+                break;
+            case 2:
+                p.image(lfl3, 300, 0);
+                break;
+            case 3:
+                p.image(lfl4, 300, 0);
+                break;
+        }
+        p.image(marcoLFL, 300, 0);
+    }
+
+    p.mousePressed = function () {
+        if (p.mouseX > 300 && p.mouseX < 300 + 500 && p.mouseY > 100 && p.mouseY < 100 + 500) {
+            console.log(imagenCover);
+            if (num === 0) {
+                num = 1;
+            } else if (num === 1) {
+                num = 2;
+            } else if (num === 2) {
+                num = 3;
+            } else if (num === 3) {
+                num = 0;
+            }
+        }
     }
 };
 
